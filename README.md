@@ -17,7 +17,7 @@ python -m experiments.analyze experiments/results/main.csv
 uvicorn app.main:app --reload                   # API   (header X-API-Key, default "dev-key")
 streamlit run dashboard/dashboard.py            # dashboard
 ```
-Without a trained model the GNN strategies run in **SAFE_MODE** (heuristic fallback) – nothing breaks.
+Without a trained model the GNN strategies run in **SAFE_MODE** (heuristic fallback) - nothing breaks.
 
 ## Architecture (matches the six layers of the proposal)
 | Layer | Code |
@@ -42,7 +42,7 @@ fixed (nothing fitted on val/test); splits are by **episode**, with a test set o
 The checkpoint stores a feature-schema hash and loading refuses a mismatch. Inference output is checked
 (finite, bounded, fresh telemetry) and any failure falls back to conventional routing.
 
-## Results (honest summary — see `experiments/results/report.md`)
+## Results (honest summary - see `experiments/results/report.md`)
 **Model quality** (`models/link_gnn_v1_metrics.json`, ~4 % positive rate)
 
 | split | AUC | baseline AUC (loss/history/util) | avg-precision | Brier | ECE |
