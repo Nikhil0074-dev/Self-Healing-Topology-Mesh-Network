@@ -1,12 +1,14 @@
 # Self-Healing Topology Mesh Network
 
-GNN-assisted self-healing routing for a dynamic mesh, with a controlled detect → plan → validate → apply → verify →roll-back loop, partition handling, a simulator, a FastAPI service, a Streamlit dashboard and a reproducible evaluation. Everything runs on CPU; the network is **simulated** (NetworkX-based, discrete time), not packet-level.
+GNN-assisted self-healing routing for a dynamic mesh, with a controlled detect → plan → validate → apply → verify → roll-back loop, partition handling, a simulator, a FastAPI service, a Streamlit dashboard and a reproducible evaluation. Everything runs on CPU; the network is **simulated** (NetworkX-based, discrete time), not packet-level.
 
 ## Quick start
 ```bash
 pip install -r requirements.txt
-python -m pytest tests -q                       # 49 tests
+python -m pytest tests -q                       # 51 tests
 bash scripts/run_pipeline.sh                    # tests -> dataset -> train -> experiments -> report
+# Windows PowerShell
+.\scripts\run_pipeline.ps1
 # or step by step
 python -m gnn.dataset                           # generate labelled snapshots (episode-split)
 python -m gnn.train                             # writes models/link_gnn_v1.pt (+ _metrics.json)
