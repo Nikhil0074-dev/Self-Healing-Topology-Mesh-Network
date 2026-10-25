@@ -1,0 +1,12 @@
+numpy
+pandas
+networkx
+torch
+fastapi
+uvicorn
+pydantic
+streamlit
+matplotlib
+pytest
+httpx
+tabulate
